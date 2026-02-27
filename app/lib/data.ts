@@ -51,6 +51,7 @@ export async function fetchLatestInvoices() {
     return latestInvoices;
   } catch (error) {
     console.error('Database Error:', error);
+    console.log(error.message);
     throw new Error('Failed to fetch the latest invoices.');
   }
 }
