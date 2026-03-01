@@ -14,9 +14,10 @@ import { useActionState } from 'react';
 import { Button } from '@/app/ui/button';
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
-
+  console.log("Se vuelve a redenrizar")
   const initialState: State = { message: null, errors: {} };
-  const [state, fromAction] = useActionState(createInvoice, initialState)
+  const [state, fromAction] = useActionState(createInvoice, initialState) // Cunado  vuelva de procesar, habra cambiado el estado Y lo  podrmeos validar para mostrar elementos visuales
+
   console.log("Logeando state")
   console.log(state)
   return (
